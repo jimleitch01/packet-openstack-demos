@@ -48,5 +48,16 @@ open -a Safari http://$(terraform show | grep network.0.address | awk '{print $3
 
 For any other OS paste this URL into your favorite browser:
 ```
-http://$(terraform show | grep network.0.address | awk '{print $3}')
+echo http://$(terraform show | grep network.0.address | awk '{print $3}')
+```
+
+#### Ready To Rock !!!
+
+
+You can now play around to your heart's content.
+
+make sure to kill your hosts when you are done:
+
+```
+terraform destroy
 ```
