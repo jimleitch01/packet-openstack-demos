@@ -5,7 +5,7 @@ resource "packet_device" "allinone" {
   facility = "ewr1"
   operating_system = "centos_7"
   billing_cycle = "hourly"
-  project_id = "${packet_project.tf_project_1.id}"
+  project_id = "${packet_project.packet_allinone.id}"
 
 
   connection {
@@ -16,6 +16,7 @@ resource "packet_device" "allinone" {
       }
 
 
+/* SETUP FIREWALL ON NEW HOST TO ONLY ALLOW FROM YOUR CURRENT INTERNET ACCESS POINT */
    provisioner "remote-exec" {
       inline = [
          "set -e",
@@ -39,6 +40,7 @@ resource "packet_device" "allinone" {
    ]
   }
 
+/* Setup RDO OpenStak */
     provisioner "remote-exec" {
        inline = [
        "set -e",
@@ -56,11 +58,6 @@ resource "packet_device" "allinone" {
        "echo End of section at $(date)"
        ]
      }
-
-     provisioner "remote-exec" {
-        script = "create_openstack_users.bash"
-      }
-
 
 
 }

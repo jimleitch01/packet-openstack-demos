@@ -1,9 +1,8 @@
 provider "packet" {
-        /*auth_token = "${var.packet_auth_token}"*/
-        auth_token = "GpWV9vPkXoK4HXnrSxSx225s2KTYvUR6"
-}
+        auth_token = "${var.packet_auth_token}"
+        }
 
-provider "dnsimple" {
-    token = "tKyIqEyOeGPXuetyC5raKAyUr6YLPHPz"
-    email = "jim.leitch@sunningdale.nl"
+        # Create a project
+resource "packet_project" "packet_allinone" {
+        name = "Packet All-In-One OpenStack"
 }

@@ -29,7 +29,7 @@ variable "num-stor-servers" {
 
 variable "ssh-timeout" {
   description = "ssh timeout"
-  default = "60s"
+  default = "900s"
 }
 
 variable "default-image-type" {
