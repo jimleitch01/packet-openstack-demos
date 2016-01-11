@@ -2,8 +2,14 @@
 
 Deploying OpenStack on "Packet.Net" bare metal hosting using Terraform
 
+This QuickStart will get a demo OpenStack environment running on baremetal hosting as provided by http://packet.Net
+
+No need to repurpose old hardware and you won't have to tidy your garage.
+
+
+
 N.B. These instruction were made on Mac, and should run with no changes in Linux. Windows should be awesome too, but
-you're on your own for that gig.
+you're on your own for that gig. (anyone who gets this working on a Windows client, please feel free to send the insturctions for me to update this)
 
 ### Pre-requisites
 
@@ -30,6 +36,8 @@ No errors ? All set ! This will take about 20 minutes
 ```
 time terraform apply
 ```
+All done ? Ok, let's get logged in
+
 
 This will output your admin user password:
 ```
@@ -61,3 +69,9 @@ make sure to kill your hosts when you are done:
 ```
 terraform destroy
 ```
+
+## Next steps
+
+- Multi Node OpenStack
+- Fully Populated CI/CD environment
+- Take a well deserved break
