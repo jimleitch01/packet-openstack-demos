@@ -2,6 +2,8 @@
 
 Deploying OpenStack on "Packet.Net" bare metal hosting using Terraform
 
+I'm using RedHat's RDO QuickStart (https://www.rdoproject.org/install/quickstart/)
+
 This QuickStart will get a demo OpenStack environment running on baremetal hosting as provided by http://packet.Net
 
 No need to repurpose old hardware and you won't have to tidy your garage.
@@ -9,7 +11,7 @@ No need to repurpose old hardware and you won't have to tidy your garage.
 
 
 N.B. These instruction were made on Mac, and should run with no changes in Linux. Windows should be awesome too, but
-you're on your own for that gig. (anyone who gets this working on a Windows client, please feel free to send the insturctions for me to update this)
+you're on your own for that gig. (anyone who gets this working on a Windows client, please feel free to send the instructions for me to update this)
 
 ### Pre-requisites
 
