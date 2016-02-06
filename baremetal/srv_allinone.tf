@@ -1,7 +1,7 @@
 # Create a device and add it to tf_project_1
 resource "packet_device" "allinone" {
   hostname = "allinone"
-  plan = "baremetal_3"
+  plan = "baremetal_1"
   facility = "ewr1"
   operating_system = "centos_7"
   billing_cycle = "hourly"
