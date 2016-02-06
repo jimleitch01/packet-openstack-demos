@@ -40,7 +40,7 @@ resource "packet_device" "allinone" {
    ]
   }
 
-/* Setup RDO OpenStak */
+/* Setup RDO OpenStack */
     provisioner "remote-exec" {
        inline = [
        "set -e",
@@ -52,6 +52,9 @@ resource "packet_device" "allinone" {
        "yum -y update",
        "time packstack --allinone --os-cinder-install=n --nagios-install=n --os-ceilometer-install=n",
        ". ./keystonerc_admin",
+       "chown root:kvm /dev/kvm",
+       "chmod 660 /dev/kvm",
+       "useradd -G kvm nova",
        "wget -q http://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2.xz",
        "unxz CentOS-7-x86_64-GenericCloud.qcow2.xz ",
        "glance --os-image-api-version 2 image-create --protected True --name CentOS7 --visibility public --disk-format raw --container-format bare --file CentOS-7-x86_64-GenericCloud.qcow2",
