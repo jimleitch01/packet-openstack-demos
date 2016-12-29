@@ -25,7 +25,7 @@ you're on your own for that gig. (anyone who gets this working on a Windows clie
 export TF_VAR_packet_auth_token=YOUR_API_TOKEN_HERE
 mkdir stuffz
 cd stuffz
-git clone git@github.com:jimleitch01/packet-openstack-demos.git
+git clone https://github.com/jimleitch01/packet-openstack-demos.git
 cd packet-openstack-demos/baremetal
 ```
 
