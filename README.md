@@ -18,7 +18,7 @@ you're on your own for that gig. (anyone who gets this working on a Windows clie
 - [Terraform](https://www.terraform.io/)
 - Git
 - Packet.Net account, with API token
-- Your ssh public key uploaded to Packet.Net via web interface
+- [Your ssh public key uploaded to Packet.Net via web interface](https://help.packet.net/technical/infrastructure/ssh-keys-at-packet-securely-access-your-bare-metal-server)
 
 
 ```
