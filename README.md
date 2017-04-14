@@ -15,7 +15,7 @@ you're on your own for that gig. (anyone who gets this working on a Windows clie
 
 ### Pre-requisites
 
-- Terraform
+- [Terraform](https://www.terraform.io/)
 - Git
 - Packet.Net account, with API token
 - Your ssh public key uploaded to Packet.Net via web interface
