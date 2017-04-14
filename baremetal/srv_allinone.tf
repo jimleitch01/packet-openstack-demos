@@ -54,7 +54,7 @@ resource "packet_device" "allinone" {
        ". ./keystonerc_admin",
        "chown root:kvm /dev/kvm",
        "chmod 660 /dev/kvm",
-       "useradd -G kvm nova",
+       "usermod -a -G kvm nova",
        "wget -q http://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2.xz",
        "unxz CentOS-7-x86_64-GenericCloud.qcow2.xz ",
        "glance --os-image-api-version 2 image-create --protected True --name CentOS7 --visibility public --disk-format raw --container-format bare --file CentOS-7-x86_64-GenericCloud.qcow2",
